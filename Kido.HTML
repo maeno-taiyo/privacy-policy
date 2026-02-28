@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移動記録アプリ「己道」 - あなたの移動が冒険になる！</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 共通設定 --- */
+        :root {
+            --primary-color: #00A86B; /* 爽やかなグリーン */
+            --accent-color: #FF7A00;  /* アクティブなオレンジ */
+            --bg-color: #F8FAFC;      /* 背景の薄いグレー */
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+        a { text-decoration: none; }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        /* --- ヒーローセクション（一番上のエリア） --- */
+        .hero {
+            background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: #00796b;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+        /* ボタンのデザイン */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, background-color 0.2s;
+            margin: 10px;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            background-color: #e66d00;
+        }
+
+        /* --- 導入セクション --- */
+        .about {
+            padding: 80px 20px;
+            background-color: white;
+            text-align: center;
+        }
+        .about p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* --- 機能セクション --- */
+        .features {
+            padding: 80px 20px;
+        }
+        /* カードを綺麗に並べるためのGridレイアウト */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px); /* ホバー時に少し浮き上がる効果 */
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* --- CTAセクション（最後のアピール） --- */
+        .cta {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .cta .btn {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        .cta .btn:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* --- フッター --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        /* --- スマホ向けの調整（レスポンシブ） --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .btn {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <h1>あなたの移動が、冒険になる！</h1>
+            <p>何気ない通勤や散歩が、楽しいクエストに変わる。<br>移動記録アプリ「己道」で、毎日の移動をもっとアクティブに。</p>
+            <a href="#" class="btn">App Storeで手に入れる</a>
+            <a href="#" class="btn">Google Playで手に入れる</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">「己道」とは？</h2>
+            <p>「己道」は、あなたの日々の移動を楽しく記録し、達成感を提供するアプリです。<br>通勤、通学、ランニング、ちょっとしたお出かけ…。<br>あなたの移動距離や時間をトラッキングし、様々な実績を獲得しながら、ライフスタイルをさらに豊かに彩ります。</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">日常が楽しくなる5つの機能</h2>
+            <div class="feature-grid">
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>記録＆可視化で思い出を残す</h3>
+                    <p>自転車、徒歩、ランニングなどの移動データを自動で記録！詳細な分析はもちろん、旅行の思い出や日常のログとしても使えます。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>達成感を味わう実績システム</h3>
+                    <p>移動距離や時間に応じて、様々なトロフィーをアンロック！自分の頑張りがカタチになり、日々の成長をしっかり実感できます。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>分析機能で進捗をチェック</h3>
+                    <p>移動の統計データを月ごとにわかりやすくグラフ化。過去の自分と比べて、次の目標設定やモチベーションアップに活用！</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>スポット訪問の記録</h3>
+                    <p>訪れた場所のジャンルを記録！新しい発見や、次のお出かけへの行動のモチベーションに繋がります。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🐾</div>
+                    <h3>移動した分だけペットを成長</h3>
+                    <p>あなたが移動して貯めたポイントで、アプリ内の可愛いペットが成長！日々の移動の頼もしいお供にしてください。</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>さあ、あなただけの「己道」を歩き出そう。</h2>
+            <p style="margin-bottom: 30px; font
