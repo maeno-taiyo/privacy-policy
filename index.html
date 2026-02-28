@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoOne - 高校情報Iを最短で身につける学習アプリ</title>
+    <meta name="description" content="AIがあなたの弱点を分析し、最短ルートで「情報I」をマスター。成績アップを確実にサポートする学習アプリです。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #58CC02; /* アプリのメイングリーン */
+            --primary-shadow: #46A302;
+            --text-main: #4B4B4B;
+            --text-light: #777777;
+            --bg-color: #F7F9FC;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* ヘッダー・ヒーローセクション */
+        .hero {
+            background: linear-gradient(135deg, #1CB0F6, #58CC02);
+            color: white;
+            text-align: center;
+            padding: 80px 20px 60px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .hero h1 {
+            font-weight: 900;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* アプリアイコンのダミー（後で実際の画像に差し替えられます） */
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 25px;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        /* ダウンロードボタン */
+        .download-btn {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            font-weight: 900;
+            font-size: 1.2rem;
+            padding: 15px 40px;
+            border-radius: 20px;
+            text-decoration: none;
+            box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+
+        .download-btn:active {
+            transform: translateY(5px);
+            box-shadow: 0 0px 0 rgba(0,0,0,0.1);
+        }
+
+        /* 特徴セクション */
+        .features {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 2px solid #E5E5E5;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-weight: 900;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* フッター */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="app-icon">♾️</div>
+        <h1>InfoOne</h1>
+        <p>高校情報Iを最短で身につける学習アプリ</p>
+        
+        <a href="#" class="download-btn">App Store で手に入れる</a>
+    </header>
+
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h3>AIが問題を自動生成</h3>
+            <p>あなたの学習状況に合わせて、AIが最適な練習問題を無制限に作成。苦手なポイントを効率的に克服できます。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>ゲーム感覚で楽しく</h3>
+            <p>毎日の学習を習慣化。ポイントを貯めてモチベーションを維持しながら、最短ルートで目標達成を目指します。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>Superで学習を加速</h3>
+            <p>プレミアムプランなら広告なし、飛び級機能、クラウド保存が解放。1週間の無料トライアルで今すぐ試そう。</p>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <a href="https://maeno-taiyo.github.io/privacy-policy/InfoOnePrivacyPolicy.md">プライバシーポリシー</a> | 
+            <a href="https://maeno-taiyo.github.io/privacy-policy/InfoOne_%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84.md">利用規約</a> |
+            <a href="mailto:sunymaeno@gmail.com">お問い合わせ</a>
+        </div>
+        <p style="margin-top: 20px;">&copy; 2026 Taiyo Maeno. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
