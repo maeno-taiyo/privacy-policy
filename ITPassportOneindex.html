@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITパスポートOne - 最短合格を目指す学習アプリ</title>
+    <meta name="description" content="AIが弱点を分析し、ITパスポート試験の合格まで最短ルートで導く学習アプリ。問題演習・AI解説・弱点分析で効率よく学べます。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #58CC02;
+            --primary-shadow: #46A302;
+            --accent-blue: #1CB0F6;
+            --text-main: #4B4B4B;
+            --text-light: #777777;
+            --bg-color: #F7F9FC;
+            --card-border: #E5E5E5;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--accent-blue), var(--primary-color));
+            color: white;
+            text-align: center;
+            padding: 80px 20px 60px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .hero h1 {
+            font-weight: 900;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 25px;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            overflow: hidden;
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            font-weight: 900;
+            font-size: 1.15rem;
+            padding: 15px 40px;
+            border-radius: 20px;
+            text-decoration: none;
+            box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+
+        .download-btn:active {
+            transform: translateY(5px);
+            box-shadow: 0 0 0 rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin: 60px 20px 20px;
+            color: var(--text-main);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1rem;
+            margin: 0 auto 30px;
+            max-width: 700px;
+            padding: 0 20px;
+        }
+
+        .features {
+            max-width: 960px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px 22px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 2px solid var(--card-border);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-weight: 900;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .plans {
+            max-width: 960px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .plan-card {
+            background: white;
+            border: 2px solid var(--card-border);
+            border-radius: 24px;
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .plan-card.recommended {
+            border: 2px solid var(--primary-color);
+            transform: scale(1.03);
+        }
+
+        .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 900;
+            padding: 6px 14px;
+            border-radius: 999px;
+            box-shadow: 0 4px 0 var(--primary-shadow);
+        }
+
+        .plan-card h3 {
+            margin: 10px 0 10px;
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin: 10px 0;
+        }
+
+        .price-sub {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .plan-features li {
+            margin: 8px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 60px 16px 50px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .download-btn {
+                font-size: 1rem;
+                padding: 14px 28px;
+            }
+
+            .plan-card.recommended {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="app-icon">
+            <!-- アプリアイコン画像を使う場合は下記を有効化 -->
+            <!-- <img src="app-icon.png" alt="ITパスポートOne アイコン"> -->
+            📘
+        </div>
+        <h1>ITパスポートOne</h1>
+        <p>AIと反復学習で、ITパスポート試験の最短合格を目指す学習アプリ</p>
+
+        <a href="#" class="download-btn">App Store で手に入れる</a>
+    </header>
+
+    <section>
+        <h2 class="section-title">ITパスポートOneの特長</h2>
+        <p class="section-subtitle">
+            初心者でも続けやすく、忙しい社会人や学生でも効率よく学べるように設計。
+            問題演習・AI解説・弱点分析をひとつにまとめた、合格特化型の学習アプリです。
+        </p>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>AIが問題と解説をサポート</h3>
+            <p>苦手分野や理解が浅いテーマに合わせて、AIが問題生成や解説補助を行い、効率よく知識を定着させます。</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>弱点分析で学習効率アップ</h3>
+            <p>回答履歴をもとに、苦手分野や復習優先度を可視化。今やるべき勉強が分かるので、遠回りせず学べます。</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>毎日続けやすい設計</h3>
+            <p>短時間でも取り組みやすい学習フローと、ゲーム感覚で進められるUIで、三日坊主になりにくい設計です。</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">☁️</div>
+            <h3>プレミアムでさらに快適</h3>
+            <p>広告非表示、AI機能、クラウド保存などのプレミアム機能で、より快適で本格的な学習環境を利用できます。</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">料金プラン</h2>
+        <p class="section-subtitle">
+            無料でも基本学習は可能。プレミアムに加入すると、広告なし・AI機能・クラウド保存が利用できます。
+        </p>
+    </section>
+
+    <section class="plans">
+        <div class="plan-card">
+            <h3>1ヶ月プラン</h3>
+            <div class="price">¥590</div>
+            <div class="price-sub">1ヶ月ごとの更新</div>
+            <ul class="plan-features">
+                <li>広告非表示</li>
+                <li>AI機能が利用可能</li>
+                <li>クラウド保存</li>
+            </ul>
+        </div>
+
+        <div class="plan-card recommended">
+            <div class="badge">おすすめ</div>
+            <h3>3ヶ月プラン</h3>
+            <div class="price">¥1,200</div>
+            <div class="price-sub">月あたり 約¥400</div>
+            <ul class="plan-features">
+                <li>広告非表示</li>
+                <li>AI機能が利用可能</li>
+                <li>クラウド保存</li>
+            </ul>
+        </div>
+
+        <div class="plan-card">
+            <h3>6ヶ月プラン</h3>
+            <div class="price">¥2,000</div>
+            <div class="price-sub">月あたり 約¥333</div>
+            <ul class="plan-features">
+                <li>広告非表示</li>
+                <li>AI機能が利用可能</li>
+                <li>クラウド保存</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <a href="https://maeno-taiyo.github.io/privacy-policy/ITPassportOnePrivacyPolicy.md">プライバシーポリシー</a> |
+            <a href="https://maeno-taiyo.github.io/privacy-policy/ITPassportOne_Terms.md">利用規約</a> |
+            <a href="mailto:sunymaeno@gmail.com">お問い合わせ</a>
+        </div>
+        <p style="margin-top: 20px;">&copy; 2026 Taiyo Maeno / SunProject. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
